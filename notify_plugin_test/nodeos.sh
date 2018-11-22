@@ -8,4 +8,4 @@ rm -rf  $1/data/*
 rm -rf wallet/*
 
 
-../../build/programs/nodeos/nodeos --config-dir $1/config --genesis-json $1/config/genesis.json -d $1/data
+/usr/local/eosio/bin/nodeos --config-dir $1/config --genesis-json $1/config/genesis.json -d $1/data

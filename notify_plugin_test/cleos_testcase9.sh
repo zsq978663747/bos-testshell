@@ -30,7 +30,7 @@ cleos wallet import --private-key ${pri_change2}
 cleos wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 
 # step 4: set contract eosio.bios
-CONTRACTS_FOLDER='../../build/contracts'
+CONTRACTS_FOLDER='../../bos/build/contracts'
 
 echo -e "\nset contract eosio.bios,you can see the message!! "
 cleos  set contract eosio ${CONTRACTS_FOLDER}/eosio.bios -p eosio > test.log 2>&1
@@ -93,8 +93,8 @@ cleos transfer eosio testproducer "100001000.0000 SYS" > test.log 2>&1
 ## check eosio balance
 cleos  get currency balance eosio.token eosio
 
-cleos system regproducer  testproducer ${p_pubkey1} https://www.123.com 90  > test.log 2>&1
-cleos system regproducer  testproduces ${p_pubkey2} https://www.123.com 90  > test.log 2>&1
+cleos system regproducer  testproducer ${p_pubkey1} https://www.123.com 9  > test.log 2>&1
+cleos system regproducer  testproduces ${p_pubkey2} https://www.123.com 9  > test.log 2>&1
 cleos system regproxy testerproxys > test.log 2>&1
 
 #delegatebw eos
