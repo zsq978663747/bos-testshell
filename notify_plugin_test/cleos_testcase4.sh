@@ -115,92 +115,92 @@ echo "*** test case 4: testerzsq113:voteproducer   ***"
 echo "*** test case quantity:  4                   ***"
 echo "************************************************"
 
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | transfer    |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"
 cleos transfer testerzsq113 testerecieve "10.0000 SYS"
 
-sleep 8
+sleep 6
 echo -e "\n------------------------------------------------------------------------"
 echo -e "| testerzsq113 | recieve token |  shouldn't see message on the server  |"
 echo -e "------------------------------------------------------------------------\n"
 cleos transfer testerecieve testerzsq113 "10.0000 SYS"
 
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | delegatebw |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"
 cleos system delegatebw testerzsq113 testerzsq113 "10.0000 SYS" "10.0000 SYS"
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | delegatebw |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"
 cleos system delegatebw testerzsq113 testerecieve "10.0000 SYS" "10.0000 SYS"
 
 
-sleep 8
+sleep 6
 echo -e "\n-------------------------------------------------------------------------------"
 echo -e "| testerzsq113 | undelegatebw testerzsq113 | shouldn't see message on the server  |"
 echo -e "---------------------------------------------------------------------------------\n"
 cleos system undelegatebw testerzsq113 testerzsq113 "10.0000 SYS" "10.0000 SYS"
 
-sleep 8
+sleep 6
 echo -e "\n-------------------------------------------------------------------------------"
 echo -e "| testerzsq113 | undelegatebw testerecieve | shouldn't see message on the server  |"
 echo -e "---------------------------------------------------------------------------------\n"
 cleos system undelegatebw testerzsq113 testerecieve "10.0000 SYS" "10.0000 SYS"
 
 
-sleep 8 
+sleep 6 
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | regproducer |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"
 cleos system regproducer  testerzsq113 ${pub_key} https://www.123.com 9
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | unregprod   |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------"
 cleos system unregprod  testerzsq113 
 
-sleep 8 
+sleep 6 
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testerzsq113 | voteproducer proxy |  should see message on the server  |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 cleos system voteproducer proxy testerzsq113  testerproxys
-sleep 8
+sleep 6
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testerzsq113 | voteproducer prods |  should see message on the server  |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 cleos system voteproducer prods  testerzsq113 testproducer
-sleep 8
+sleep 6
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testerzsq113 | voteproducer approve |  should see message on the server  |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 cleos system voteproducer approve  testerzsq113  testproduces
-sleep 8
+sleep 6
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testerzsq113 | voteproducer unapprove  |  should see message on the server  |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 cleos system voteproducer unapprove  testerzsq113   testproducer
 
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | buyram      |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"
 cleos system buyram testerzsq113 testerzsq113 "5.0000 SYS"
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | sellram     |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"
 cleos system sellram testerzsq113 100
 
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | regproxy    |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"
 cleos system regproxy testerzsq113
-sleep 8
+sleep 6
 echo -e "\n----------------------------------------------------------------------"
 echo -e "| testerzsq113 | unregproxy |  shouldn't see message on the server  |"
 echo -e "----------------------------------------------------------------------\n"

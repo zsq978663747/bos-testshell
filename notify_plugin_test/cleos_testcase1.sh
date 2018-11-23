@@ -112,145 +112,145 @@ echo "*** test case 1: testalaction:               ***\n"
 echo "*** test case quantity: 26                   ***\n"
 echo "************************************************\n"
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | transfer   |  should see message on the server   |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos transfer testalaction testerecieve "10.0000 SYS"
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | revice token |should see message on the server   |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-cleos transfer testalaction testerzsq111 "10.0000 SYS"
+cleos transfer testalaction testerzsq111 "20.0000 SYS"
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | delegatebw testalaction |  should see message on the server  |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system delegatebw testalaction testalaction "10.0000 SYS" "10.0000 SYS"
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | delegatebw testerecieve |  should see message on the server  |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
-cleos system delegatebw testalaction testerecieve "10.0000 SYS" "10.0000 SYS"
+cleos system delegatebw testalaction testerecieve "20.0000 SYS" "20.0000 SYS"
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | undelegatebw testalaction |  should see message on the server  |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
 cleos system undelegatebw testalaction testalaction "10.0000 SYS" "10.0000 SYS"
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | undelegatebw testerecieve |  should see message on the server  |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
-cleos system undelegatebw testalaction testerecieve "10.0000 SYS" "10.0000 SYS"
+cleos system undelegatebw testalaction testerecieve "20.0000 SYS" "20.0000 SYS"
 
 
-sleep 8 
+sleep 3 
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | regproducer    |  should see message on the server  |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system regproducer  testalaction ${pub_key} https://www.123.com 9
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | unregprod  |  should see message on the server      |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system unregprod  testalaction 
 
-sleep 8 
+sleep 3 
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | voteproducer proxy | should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system voteproducer proxy testalaction  testerproxys
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | voteproducer prods |  should see message on the server  |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system voteproducer prods  testalaction testproducer
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | voteproducer approve | should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system voteproducer approve  testalaction  testproduces
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | voteproducer unapprove |should see message on the server|"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system voteproducer unapprove  testalaction   testproducer
 
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | buyram for self |  should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system buyram testalaction testalaction "5.0000 SYS"
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | buyram for testerecieve |  should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system buyram testalaction testerecieve "5.0000 SYS"
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | buyram from testerecieve |  should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system buyram testerecieve testalaction "5.0000 SYS"
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | sellram |  should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system sellram testalaction 100
 
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | regproxy | should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system regproxy testalaction
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | unregproxy | should see message on the server|"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos system unregproxy testalaction
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set  contract   | should see message on the server |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos set contract testalaction ${CONTRACTS_FOLDER}/eosio.token -p testalaction 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set clear | should see message on the server |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos set contract testalaction ${CONTRACTS_FOLDER}/eosio.token -c 
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set code  | should see message on the server |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos set code testalaction ${CONTRACTS_FOLDER}/eosio.token/eosio.token.wasm -p testalaction 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set clear | should see message on the server |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos set code testalaction ${CONTRACTS_FOLDER}/eosio.token -c 
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set abi  | should see message on the server |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos set abi testalaction ${CONTRACTS_FOLDER}/eosio.token/eosio.token.abi -p testalaction 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set clear | should see message on the server |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos set abi testalaction ${CONTRACTS_FOLDER}/eosio.token -c 
 
-sleep 8
+sleep 3
 echo -e "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set clear | should see message on the server |"
 echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 cleos set account  permission testalaction owner  EOS6ZoCdrkbuuVggewpv3kkvy4WWnM9hrgPnSm6sRvRPqY6qmxuZY -p testalaction@owner
-sleep 8
+sleep 3
 echo -e "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo -e "| testalaction | set account  | should see message on the server |"
 echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
