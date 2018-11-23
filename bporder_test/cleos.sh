@@ -30,7 +30,7 @@ cleos wallet import --private-key ${pri_change2}
 cleos wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 
 # step 4: set contract eosio.bios
-CONTRACTS_FOLDER='../../build/contracts'
+CONTRACTS_FOLDER='../../bos/build/contracts'
 
 echo -e "\nset contract eosio.bios,you can see the message!! "
 cleos  set contract eosio ${CONTRACTS_FOLDER}/eosio.bios -p eosio > test.log 2>&1
@@ -185,3 +185,9 @@ sleep 2
 echo -e "\n===========================testcase 9========================================"
 echo "not set the location,have error!"
 cleos system regproducer  testproducea ${p_pubkey1} https://www.123.com   -12
+
+sleep 2
+echo -e "\n===========================testcase 10========================================"
+echo "not set the location,have error!"
+cleos system regproducer  testproducea ${p_pubkey1} https://www.123.com   -20
+
